@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trường An Logistics — Vận tải hàng hóa toàn quốc</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-mark" aria-hidden="true"></span>
+    Trường An Logistics
+  </a>
+  <ul class="nav-links">
+    <li><a href="#calculator" class="link">Ước tính cước</a></li>
+    <li><a href="#why-us" class="link">Vì sao chọn chúng tôi</a></li>
+    <li><a href="#contact" class="btn btn-primary">Liên hệ</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Vận tải hàng hóa toàn quốc</div>
+    <h1>Cước phí minh bạch, giao hàng đúng hẹn.</h1>
+    <p class="tagline">Nhập điểm đi, điểm đến và khối lượng hàng — nhận báo giá cước vận chuyển ngay lập tức, không cần chờ gọi điện tư vấn.</p>
+    <div class="hero-actions">
+      <a href="#calculator" class="btn btn-primary">Ước tính cước ngay</a>
+      <a href="#contact" class="btn btn-outline">Liên hệ tư vấn</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="calculator">
+    <div class="section-head">
+      <div class="eyebrow">Công cụ ước tính</div>
+      <h2>Tính cước vận chuyển của bạn</h2>
+      <p>Nhập thông tin tuyến đường và khối lượng hàng để nhận báo giá tham khảo tức thì.</p>
+    </div>
+
+    <div class="calc-wrap">
+      <div class="calc-panel">
+        <div class="field">
+          <label for="origin-input">Điểm đi</label>
+          <div class="input-wrap">
+            <span class="icon" aria-hidden="true"></span>
+            <input type="text" id="origin-input" placeholder="Nhập địa chỉ hoặc kho hàng...">
+          </div>
+          <button type="button" class="pick-btn" id="pick-origin-btn">Chọn trên bản đồ</button>
+        </div>
+
+        <div class="field route-line">
+          <div class="route-connector" aria-hidden="true"></div>
+          <label for="destination-input">Điểm đến</label>
+          <div class="input-wrap">
+            <span class="icon" aria-hidden="true"></span>
+            <input type="text" id="destination-input" placeholder="Nhập địa chỉ giao hàng...">
+          </div>
+          <button type="button" class="pick-btn" id="pick-destination-btn">Chọn trên bản đồ</button>
+        </div>
+
+        <div class="field">
+          <label for="tonnage-input">Khối lượng hàng</label>
+          <div class="input-wrap">
+            <input type="number" id="tonnage-input" placeholder="Ví dụ: 5" min="0" step="0.1" style="padding-left:14px;">
+            <span id="tonnage-unit">tấn</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary calc-btn" id="calc-button">Tính cước</button>
+        <p class="calc-note">Báo giá tham khảo, có thể thay đổi tùy loại hàng và thời điểm.</p>
+        <div class="dev-note" id="dev-note">
+          Bản đồ chưa tải được — kiểm tra Google Maps API key trong file script.js.
+        </div>
+      </div>
+
+      <div class="map-panel">
+        <div class="pick-banner" id="pick-banner"></div>
+        <div class="map-placeholder" id="map-placeholder">
+          Bản đồ tuyến đường sẽ hiển thị ở đây sau khi bạn nhập điểm đi và điểm đến.
+        </div>
+        <div id="map" style="display:none;"></div>
+      </div>
+
+      <div class="waybill" id="waybill">
+        <div>
+          <div class="waybill-route" id="wb-route">—</div>
+          <div class="waybill-meta">
+            <div>Quãng đường<strong id="wb-distance">—</strong></div>
+            <div>Khối lượng<strong id="wb-tonnage">—</strong></div>
+            <div>Đơn giá<strong id="wb-rate">—</strong></div>
+          </div>
+        </div>
+        <div class="waybill-total">
+          <div class="label">Tổng cước</div>
+          <div class="amount" id="wb-total">—</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why-us">
+    <div class="section-head">
+      <div class="eyebrow">Vì sao chọn chúng tôi</div>
+      <h2>Đối tác vận tải đáng tin cậy</h2>
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true"></div>
+        <h3>Đúng hẹn</h3>
+        <p>Theo dõi hành trình rõ ràng, cam kết thời gian giao nhận với từng chuyến hàng.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true"></div>
+        <h3>Cước phí minh bạch</h3>
+        <p>Không phụ phí ẩn — báo giá rõ ràng ngay từ bước ước tính ban đầu.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true"></div>
+        <h3>Đội xe đa dạng</h3>
+        <p>Đáp ứng nhiều loại hàng hóa và khối lượng, từ đơn hàng nhỏ đến hàng container.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <strong>Trường An Logistics</strong><br>
+  Liên hệ để được tư vấn báo giá chi tiết cho lô hàng của bạn.
+</footer>
+
+<!-- Thay YOUR_GOOGLE_MAPS_API_KEY bên dưới bằng API key thật -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3j42RKcTVcZzsdmHSo2qgv2_ZO9Ndh1M&libraries=places&callback=initMap" async defer></script>
+<script src="script.js"></script>
+</body>
+</html>
