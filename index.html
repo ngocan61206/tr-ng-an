@@ -14,125 +14,183 @@
     Trường An Logistics
   </a>
   <ul class="nav-links">
-    <li><a href="#calculator" class="link">Ước tính cước</a></li>
-    <li><a href="#why-us" class="link">Vì sao chọn chúng tôi</a></li>
+    <li><a href="#services" class="link">Dịch vụ</a></li>
+    <li><a href="#fleet" class="link">Đội xe</a></li>
     <li><a href="#contact" class="btn btn-primary">Liên hệ</a></li>
   </ul>
 </nav>
 
 <header class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Vận tải hàng hóa toàn quốc</div>
-    <h1>Cước phí minh bạch, giao hàng đúng hẹn.</h1>
-    <p class="tagline">Nhập điểm đi, điểm đến và khối lượng hàng — nhận báo giá cước vận chuyển ngay lập tức, không cần chờ gọi điện tư vấn.</p>
-    <div class="hero-actions">
-      <a href="#calculator" class="btn btn-primary">Ước tính cước ngay</a>
-      <a href="#contact" class="btn btn-outline">Liên hệ tư vấn</a>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Vận tải hàng hóa toàn quốc</div>
+      <h1>Đối tác vận tải bạn có thể tin tưởng.</h1>
+      <p class="tagline">Vận chuyển hàng hóa nội địa và liên tỉnh — đúng hẹn, an toàn, với đội xe sẵn sàng cho mọi lô hàng lớn nhỏ.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Liên hệ ngay</a>
+        <a href="#services" class="btn btn-outline">Xem dịch vụ</a>
+      </div>
     </div>
+
+    <!-- Minh họa xe tải tự vẽ (SVG gốc, không dùng ảnh có bản quyền) -->
+    <svg class="hero-truck" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Minh họa xe tải chở hàng">
+      <ellipse cx="240" cy="255" rx="200" ry="14" fill="rgba(0,0,0,0.25)"/>
+      <!-- container box -->
+      <rect x="60" y="90" width="220" height="120" rx="6" fill="#EEF1F5"/>
+      <rect x="60" y="90" width="220" height="120" rx="6" fill="none" stroke="rgba(11,31,53,0.15)" stroke-width="2"/>
+      <line x1="120" y1="90" x2="120" y2="210" stroke="rgba(11,31,53,0.12)" stroke-width="2"/>
+      <line x1="180" y1="90" x2="180" y2="210" stroke="rgba(11,31,53,0.12)" stroke-width="2"/>
+      <line x1="240" y1="90" x2="240" y2="210" stroke="rgba(11,31,53,0.12)" stroke-width="2"/>
+      <rect x="60" y="90" width="220" height="14" fill="#C08A2E"/>
+      <!-- cab -->
+      <path d="M280 130 h60 a14 14 0 0 1 14 14 v50 a16 16 0 0 1 -16 16 h-58 z" fill="#14304F"/>
+      <rect x="292" y="145" width="34" height="30" rx="4" fill="#A8D5E8"/>
+      <circle cx="300" cy="145" r="0" fill="none"/>
+      <!-- chassis -->
+      <rect x="60" y="210" width="290" height="14" fill="#0B1F35"/>
+      <!-- wheels -->
+      <circle cx="120" cy="234" r="24" fill="#1F2937"/>
+      <circle cx="120" cy="234" r="10" fill="#EEF1F5"/>
+      <circle cx="230" cy="234" r="24" fill="#1F2937"/>
+      <circle cx="230" cy="234" r="10" fill="#EEF1F5"/>
+      <circle cx="320" cy="234" r="24" fill="#1F2937"/>
+      <circle cx="320" cy="234" r="10" fill="#EEF1F5"/>
+      <!-- motion lines -->
+      <line x1="10" y1="140" x2="45" y2="140" stroke="rgba(255,255,255,0.4)" stroke-width="4" stroke-linecap="round"/>
+      <line x1="0" y1="165" x2="40" y2="165" stroke="rgba(255,255,255,0.28)" stroke-width="4" stroke-linecap="round"/>
+      <line x1="15" y1="190" x2="45" y2="190" stroke="rgba(255,255,255,0.2)" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="num">10+</div><div class="label">Năm hoạt động</div></div>
+    <div class="stat"><div class="num">63</div><div class="label">Tỉnh thành phục vụ</div></div>
+    <div class="stat"><div class="num">24/7</div><div class="label">Hỗ trợ khách hàng</div></div>
   </div>
 </header>
 
 <main>
-  <section class="section" id="calculator">
+  <section class="section" id="services">
     <div class="section-head">
-      <div class="eyebrow">Công cụ ước tính</div>
-      <h2>Tính cước vận chuyển của bạn</h2>
-      <p>Nhập thông tin tuyến đường và khối lượng hàng để nhận báo giá tham khảo tức thì.</p>
+      <div class="eyebrow">Dịch vụ</div>
+      <h2>Vận tải hàng hóa nội địa &amp; liên tỉnh</h2>
+      <p>Đáp ứng nhu cầu vận chuyển đa dạng, từ đơn hàng lẻ đến hợp đồng dài hạn.</p>
     </div>
 
-    <div class="calc-wrap">
-      <div class="calc-panel">
-        <div class="field">
-          <label for="origin-input">Điểm đi</label>
-          <div class="input-wrap">
-            <span class="icon" aria-hidden="true"></span>
-            <input type="text" id="origin-input" placeholder="Nhập địa chỉ hoặc kho hàng...">
-          </div>
-          <button type="button" class="pick-btn" id="pick-origin-btn">Chọn trên bản đồ</button>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7h11v9H3z" stroke="#fff" stroke-width="2"/><path d="M14 10h4l3 3v3h-7z" stroke="#fff" stroke-width="2"/><circle cx="7" cy="18" r="1.6" fill="#fff"/><circle cx="18" cy="18" r="1.6" fill="#fff"/></svg>
         </div>
+        <h3>Vận chuyển liên tỉnh</h3>
+        <p>Kết nối các tỉnh thành trên toàn quốc với lịch trình ổn định, đúng hẹn.</p>
+      </div>
 
-        <div class="field route-line">
-          <div class="route-connector" aria-hidden="true"></div>
-          <label for="destination-input">Điểm đến</label>
-          <div class="input-wrap">
-            <span class="icon" aria-hidden="true"></span>
-            <input type="text" id="destination-input" placeholder="Nhập địa chỉ giao hàng...">
-          </div>
-          <button type="button" class="pick-btn" id="pick-destination-btn">Chọn trên bản đồ</button>
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="1" stroke="#fff" stroke-width="2"/><path d="M3 9h18" stroke="#fff" stroke-width="2"/></svg>
         </div>
+        <h3>Vận chuyển nội địa</h3>
+        <p>Giao nhận nhanh chóng trong khu vực, phù hợp cho đơn hàng cần thời gian gấp.</p>
+      </div>
 
-        <div class="field">
-          <label for="tonnage-input">Khối lượng hàng</label>
-          <div class="input-wrap">
-            <input type="number" id="tonnage-input" placeholder="Ví dụ: 5" min="0" step="0.1" style="padding-left:14px;">
-            <span id="tonnage-unit">tấn</span>
-          </div>
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z" stroke="#fff" stroke-width="2"/></svg>
         </div>
+        <h3>Hàng hóa an toàn</h3>
+        <p>Quy trình kiểm tra và bảo quản hàng hóa nghiêm ngặt trong suốt hành trình.</p>
+      </div>
 
-        <button class="btn btn-primary calc-btn" id="calc-button">Tính cước</button>
-        <p class="calc-note">Báo giá tham khảo, có thể thay đổi tùy loại hàng và thời điểm.</p>
-        <div class="dev-note" id="dev-note">
-          Bản đồ chưa tải được — kiểm tra Google Maps API key trong file script.js.
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2"/></svg>
+        </div>
+        <h3>Giao đúng hẹn</h3>
+        <p>Cam kết thời gian giao nhận rõ ràng cho từng chuyến hàng.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="fleet">
+    <div class="section-head">
+      <div class="eyebrow">Đội xe</div>
+      <h2>Hình ảnh đội xe của chúng tôi</h2>
+      <p>Đội xe đa dạng, sẵn sàng đáp ứng nhiều loại hàng hóa và khối lượng khác nhau.</p>
+    </div>
+
+    <div class="fleet-grid">
+      <div class="fleet-photo">
+        <img src="images/truck-1.jpg" alt="Xe tải Trường An Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-note" style="display:flex; flex-direction:column; align-items:center;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="12" height="9" stroke="#5B6470" stroke-width="1.6"/><path d="M15 10h4l2 2v4h-6z" stroke="#5B6470" stroke-width="1.6"/></svg>
+          Thay ảnh xe thật: đặt file vào images/truck-1.jpg
         </div>
       </div>
 
-      <div class="map-panel">
-        <div class="pick-banner" id="pick-banner"></div>
-        <div class="map-placeholder" id="map-placeholder">
-          Bản đồ tuyến đường sẽ hiển thị ở đây sau khi bạn nhập điểm đi và điểm đến.
+      <div class="fleet-photo">
+        <img src="images/truck-2.jpg" alt="Xe tải Trường An Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-note" style="display:flex; flex-direction:column; align-items:center;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="12" height="9" stroke="#5B6470" stroke-width="1.6"/><path d="M15 10h4l2 2v4h-6z" stroke="#5B6470" stroke-width="1.6"/></svg>
+          Thay ảnh xe thật: đặt file vào images/truck-2.jpg
         </div>
-        <div id="map" style="display:none;"></div>
       </div>
 
-      <div class="waybill" id="waybill">
-        <div>
-          <div class="waybill-route" id="wb-route">—</div>
-          <div class="waybill-meta">
-            <div>Quãng đường<strong id="wb-distance">—</strong></div>
-            <div>Khối lượng<strong id="wb-tonnage">—</strong></div>
-            <div>Đơn giá<strong id="wb-rate">—</strong></div>
-          </div>
-        </div>
-        <div class="waybill-total">
-          <div class="label">Tổng cước</div>
-          <div class="amount" id="wb-total">—</div>
+      <div class="fleet-photo">
+        <img src="images/truck-3.jpg" alt="Xe tải Trường An Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-note" style="display:flex; flex-direction:column; align-items:center;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="12" height="9" stroke="#5B6470" stroke-width="1.6"/><path d="M15 10h4l2 2v4h-6z" stroke="#5B6470" stroke-width="1.6"/></svg>
+          Thay ảnh xe thật: đặt file vào images/truck-3.jpg
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="why-us">
+  <section class="section">
     <div class="section-head">
       <div class="eyebrow">Vì sao chọn chúng tôi</div>
       <h2>Đối tác vận tải đáng tin cậy</h2>
     </div>
-    <div class="features">
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true"></div>
-        <h3>Đúng hẹn</h3>
-        <p>Theo dõi hành trình rõ ràng, cam kết thời gian giao nhận với từng chuyến hàng.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true"></div>
+        <h3>Kinh nghiệm lâu năm</h3>
+        <p>Nhiều năm hoạt động trong ngành vận tải, am hiểu tuyến đường và quy trình.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true"></div>
-        <h3>Cước phí minh bạch</h3>
-        <p>Không phụ phí ẩn — báo giá rõ ràng ngay từ bước ước tính ban đầu.</p>
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true"></div>
+        <h3>Giá cả hợp lý</h3>
+        <p>Chi phí vận chuyển cạnh tranh, phù hợp với nhiều quy mô doanh nghiệp.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true"></div>
-        <h3>Đội xe đa dạng</h3>
-        <p>Đáp ứng nhiều loại hàng hóa và khối lượng, từ đơn hàng nhỏ đến hàng container.</p>
+      <div class="why-card">
+        <div class="why-icon" aria-hidden="true"></div>
+        <h3>Hỗ trợ tận tâm</h3>
+        <p>Đội ngũ luôn sẵn sàng tư vấn và giải đáp thắc mắc trong suốt quá trình vận chuyển.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="contact-panel">
+      <h2>Liên hệ với chúng tôi</h2>
+      <p>Cần vận chuyển hàng hóa? Liên hệ để được tư vấn và báo giá.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="label">Điện thoại</div>
+          <div class="value placeholder">Đang cập nhật</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Email</div>
+          <div class="value placeholder">Đang cập nhật</div>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer id="contact">
-  <strong>Trường An Logistics</strong><br>
-  Liên hệ để được tư vấn báo giá chi tiết cho lô hàng của bạn.
+<footer>
+  Trường An Logistics · Vận tải hàng hóa toàn quốc
 </footer>
 
-<!-- Thay YOUR_GOOGLE_MAPS_API_KEY bên dưới bằng API key thật -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3j42RKcTVcZzsdmHSo2qgv2_ZO9Ndh1M&libraries=places&callback=initMap" async defer></script>
-<script src="script.js"></script>
 </body>
 </html>
