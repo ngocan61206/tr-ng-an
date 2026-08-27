@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --navy-deep: #0B1F35;
-  --navy: #14304F;
+  --navy-deep: #14304F;
+  --navy: #1B3E63;
   --navy-mid: #24507C;
   --steel: #64748B;
   --steel-100: #EEF1F5;
   --steel-50: #F7F9FB;
+  --cream: #FFF9EE;
+  --cream-mid: #FCEFCF;
+  --cream-deep: #F6DFA6;
   --gold: #C08A2E;
   --gold-deep: #A5731F;
   --white: #FFFFFF;
@@ -113,15 +116,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 .btn:hover { transform: translateY(-2px); }
 .btn-primary { background: var(--gold); color: var(--navy-deep); box-shadow: 0 10px 22px -8px rgba(192, 138, 46, 0.55); }
 .btn-primary:hover { background: var(--gold-deep); }
-.btn-outline { background: transparent; border-color: rgba(255,255,255,0.4); color: #fff; }
-.btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+.btn-outline { background: transparent; border-color: rgba(20,48,79,0.3); color: var(--navy-deep); }
+.btn-outline:hover { border-color: var(--navy-deep); background: rgba(20,48,79,0.06); }
 
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
   padding: 100px 6vw 0;
-  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-mid) 100%);
-  color: #fff;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--cream-mid) 55%, var(--cream-deep) 100%);
+  color: var(--navy-deep);
   overflow: hidden;
 }
 
@@ -130,8 +133,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
   position: absolute;
   inset: 0;
   background-image:
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 64px),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 64px);
+    repeating-linear-gradient(90deg, rgba(20,48,79,0.05) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(0deg, rgba(20,48,79,0.05) 0 1px, transparent 1px 64px);
   mask-image: radial-gradient(ellipse at 70% 30%, black, transparent 70%);
   pointer-events: none;
 }
@@ -165,8 +168,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 }
 .hero-eyebrow::before { content: ""; width: 22px; height: 2px; background: var(--gold); display: inline-block; }
 
-.hero h1 { font-size: clamp(2.3rem, 4.4vw, 3.3rem); font-weight: 700; color: #fff; }
-.hero .tagline { margin: 20px 0 0; font-size: 1.08rem; color: rgba(255,255,255,0.82); max-width: 480px; }
+.hero h1 { font-size: clamp(2.3rem, 4.4vw, 3.3rem); font-weight: 700; color: var(--navy-deep); }
+.hero .tagline { margin: 20px 0 0; font-size: 1.08rem; color: var(--ink-soft); max-width: 480px; }
 .hero-actions { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
 
 @media (max-width: 860px) { .hero-actions { justify-content: center; } }
@@ -176,17 +179,17 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 /* ---------- Stats bar ---------- */
 .stats-bar {
   position: relative;
-  background: var(--navy-deep);
-  border-top: 1px solid rgba(255,255,255,0.1);
+  background: var(--gold);
+  border-top: 1px solid rgba(20,48,79,0.08);
   padding: 26px 6vw;
   display: flex;
   justify-content: center;
   gap: 56px;
   flex-wrap: wrap;
 }
-.stat { text-align: center; color: #fff; }
-.stat .num { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--gold); }
-.stat .label { font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-top: 2px; }
+.stat { text-align: center; color: var(--navy-deep); }
+.stat .num { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--navy-deep); }
+.stat .label { font-size: 0.82rem; color: rgba(20,48,79,0.75); margin-top: 2px; }
 
 /* ---------- Sections ---------- */
 main { background: var(--steel-50); }
