@@ -21,93 +21,15 @@
   </ul>
 </nav>
 
-<header class="hero">
-  <div class="hero-grid">
-    <div>
-      <div class="hero-eyebrow">Vận tải hàng hóa toàn quốc</div>
-      <h1>Đối tác vận tải bạn có thể tin tưởng.</h1>
-      <p class="tagline">Vận chuyển hàng hóa nội địa và liên tỉnh — đúng hẹn, an toàn, với đội xe sẵn sàng cho mọi lô hàng lớn nhỏ.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Liên hệ ngay</a>
-        <a href="#services" class="btn btn-outline">Xem dịch vụ</a>
-      </div>
+<header class="hero" style="background-image: linear-gradient(90deg, rgba(255,249,238,0.94) 0%, rgba(255,249,238,0.55) 42%, rgba(255,249,238,0) 62%), url('hero-bg.jpg');">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Vận tải hàng hóa toàn quốc</div>
+    <h1>Đối tác vận tải bạn có thể tin tưởng.</h1>
+    <p class="tagline">Vận chuyển hàng hóa nội địa và liên tỉnh — đúng hẹn, an toàn, với đội xe sẵn sàng cho mọi lô hàng lớn nhỏ.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Liên hệ ngay</a>
+      <a href="#services" class="btn btn-outline">Xem dịch vụ</a>
     </div>
-
-    <!-- Minh họa xe tải tự vẽ (SVG gốc, không dùng ảnh có bản quyền) -->
-    <svg class="hero-truck" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Minh họa xe tải chở hàng">
-      <defs>
-        <linearGradient id="boxGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#FFFFFF"/>
-          <stop offset="100%" stop-color="#DCE3EA"/>
-        </linearGradient>
-        <linearGradient id="cabGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#1B3E63"/>
-          <stop offset="100%" stop-color="#0B1F35"/>
-        </linearGradient>
-        <radialGradient id="wheelGrad" cx="35%" cy="35%" r="70%">
-          <stop offset="0%" stop-color="#3A4655"/>
-          <stop offset="100%" stop-color="#12161C"/>
-        </radialGradient>
-        <linearGradient id="shadowGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="rgba(11,31,53,0)"/>
-          <stop offset="50%" stop-color="rgba(11,31,53,0.28)"/>
-          <stop offset="100%" stop-color="rgba(11,31,53,0)"/>
-        </linearGradient>
-      </defs>
-
-      <ellipse cx="230" cy="256" rx="210" ry="12" fill="url(#shadowGrad)"/>
-
-      <!-- container box, slight perspective via skewed top -->
-      <rect x="58" y="92" width="222" height="118" rx="5" fill="url(#boxGrad)"/>
-      <rect x="58" y="92" width="222" height="118" rx="5" fill="none" stroke="rgba(11,31,53,0.18)" stroke-width="1.5"/>
-      <rect x="58" y="92" width="222" height="16" fill="#C08A2E"/>
-      <line x1="118" y1="108" x2="118" y2="210" stroke="rgba(11,31,53,0.14)" stroke-width="1.5"/>
-      <line x1="178" y1="108" x2="178" y2="210" stroke="rgba(11,31,53,0.14)" stroke-width="1.5"/>
-      <line x1="238" y1="108" x2="238" y2="210" stroke="rgba(11,31,53,0.14)" stroke-width="1.5"/>
-      <!-- side highlight -->
-      <rect x="58" y="108" width="8" height="102" fill="rgba(255,255,255,0.5)"/>
-
-      <!-- cab, sleeker angled shape -->
-      <path d="M280 128 h34 a26 26 0 0 1 22 12 l16 20 a10 10 0 0 1 2 6 v28 a16 16 0 0 1 -16 16 h-58 z" fill="url(#cabGrad)"/>
-      <path d="M330 148 l14 16 h-14 z" fill="rgba(255,255,255,0.08)"/>
-      <!-- windshield -->
-      <path d="M292 138 h30 a10 10 0 0 1 8 4 l10 14 h-48 z" fill="#A8D5E8"/>
-      <path d="M292 138 h30 a10 10 0 0 1 8 4 l3 4 h-41 z" fill="rgba(255,255,255,0.4)"/>
-      <!-- door line + mirror -->
-      <line x1="316" y1="150" x2="316" y2="204" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
-      <rect x="278" y="144" width="5" height="14" rx="2" fill="#0B1F35"/>
-      <!-- grille -->
-      <rect x="332" y="176" width="24" height="18" rx="3" fill="#0B1F35" stroke="rgba(255,255,255,0.15)"/>
-      <!-- headlight with glow -->
-      <circle cx="358" cy="196" r="7" fill="#FCEFCF"/>
-      <circle cx="358" cy="196" r="12" fill="#FCEFCF" opacity="0.25"/>
-
-      <!-- chassis -->
-      <rect x="58" y="210" width="300" height="12" fill="#0B1F35"/>
-      <rect x="58" y="210" width="300" height="4" fill="rgba(255,255,255,0.1)"/>
-
-      <!-- wheels with rim + tread -->
-      <g>
-        <circle cx="118" cy="234" r="25" fill="url(#wheelGrad)"/>
-        <circle cx="118" cy="234" r="11" fill="#E9EDF1"/>
-        <circle cx="118" cy="234" r="4" fill="#8B95A1"/>
-      </g>
-      <g>
-        <circle cx="228" cy="234" r="25" fill="url(#wheelGrad)"/>
-        <circle cx="228" cy="234" r="11" fill="#E9EDF1"/>
-        <circle cx="228" cy="234" r="4" fill="#8B95A1"/>
-      </g>
-      <g>
-        <circle cx="330" cy="234" r="25" fill="url(#wheelGrad)"/>
-        <circle cx="330" cy="234" r="11" fill="#E9EDF1"/>
-        <circle cx="330" cy="234" r="4" fill="#8B95A1"/>
-      </g>
-
-      <!-- dynamic speed streaks -->
-      <line x1="4" y1="132" x2="48" y2="132" stroke="rgba(20,48,79,0.4)" stroke-width="5" stroke-linecap="round"/>
-      <line x1="-8" y1="158" x2="42" y2="158" stroke="rgba(20,48,79,0.28)" stroke-width="5" stroke-linecap="round"/>
-      <line x1="10" y1="184" x2="46" y2="184" stroke="rgba(20,48,79,0.18)" stroke-width="5" stroke-linecap="round"/>
-    </svg>
   </div>
 
   <div class="stats-bar">
@@ -116,6 +38,10 @@
     <div class="stat"><div class="num">24/7</div><div class="label">Hỗ trợ khách hàng</div></div>
   </div>
 </header>
+
+<div style="background: var(--cream); padding: 8px 6vw;">
+  <img src="why-us-strip.jpg" alt="An toàn hàng hóa, giao hàng đúng hẹn, phủ sóng toàn quốc" style="width:100%; max-width:1180px; display:block; margin:0 auto;">
+</div>
 
 <main>
   <section class="section" id="services">
@@ -170,7 +96,7 @@
     <div class="fleet-grid">
       <div class="fleet-photo">
         <img src="truck-1.jpg" alt="Xe tải Trường An Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="placeholder-note" style="display:flex; flex-direction:column; align-items:center;">
+        <div class="placeholder-note">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="12" height="9" stroke="#5B6470" stroke-width="1.6"/><path d="M15 10h4l2 2v4h-6z" stroke="#5B6470" stroke-width="1.6"/></svg>
           Thay ảnh xe thật: đặt file vào truck-1.jpg
         </div>
@@ -178,7 +104,7 @@
 
       <div class="fleet-photo">
         <img src="truck-2.jpg" alt="Xe tải Trường An Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="placeholder-note" style="display:flex; flex-direction:column; align-items:center;">
+        <div class="placeholder-note">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="12" height="9" stroke="#5B6470" stroke-width="1.6"/><path d="M15 10h4l2 2v4h-6z" stroke="#5B6470" stroke-width="1.6"/></svg>
           Thay ảnh xe thật: đặt file vào truck-2.jpg
         </div>
@@ -186,7 +112,7 @@
 
       <div class="fleet-photo">
         <img src="truck-3.jpg" alt="Xe tải Trường An Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="placeholder-note" style="display:flex; flex-direction:column; align-items:center;">
+        <div class="placeholder-note">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="12" height="9" stroke="#5B6470" stroke-width="1.6"/><path d="M15 10h4l2 2v4h-6z" stroke="#5B6470" stroke-width="1.6"/></svg>
           Thay ảnh xe thật: đặt file vào truck-3.jpg
         </div>
@@ -200,12 +126,9 @@
       <h2>Con người của Trường An</h2>
       <p>Đội ngũ tận tâm phía sau mỗi chuyến hàng — luôn sẵn sàng đồng hành cùng khách hàng.</p>
     </div>
-    <div class="fleet-photo" style="max-width: 720px; margin: 0 auto; aspect-ratio: 16/9;">
-      <img src="team.jpg" alt="Đội ngũ nhân viên Trường An Logistics" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div class="placeholder-note" style="display:flex; flex-direction:column; align-items:center;">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="12" height="9" stroke="#5B6470" stroke-width="1.6"/><path d="M15 10h4l2 2v4h-6z" stroke="#5B6470" stroke-width="1.6"/></svg>
-        Thay ảnh đội ngũ thật: đặt file vào team.jpg
-      </div>
+    <div style="display:flex; flex-direction:column; gap:18px; max-width:1100px; margin:0 auto;">
+      <img src="team-scene-top.jpg" alt="Đội ngũ Trường An bốc xếp và giao hàng" style="width:100%; border-radius:16px; display:block;">
+      <img src="team-scene-bottom.jpg" alt="Đội ngũ Trường An giao hàng tận nơi" style="width:100%; border-radius:16px; display:block;">
     </div>
   </section>
 
