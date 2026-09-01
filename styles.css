@@ -1,0 +1,165 @@
+:root{
+  --navy:#173B63;
+  --navy-2:#0f2f51;
+  --blue:#4A8BC8;
+  --orange:#ECA126;
+  --orange-dark:#CE8516;
+  --cream:#FFF9ED;
+  --cream-2:#FFF3D9;
+  --paper:#FFFDF8;
+  --green:#78AD70;
+  --ink:#17324C;
+  --muted:#627083;
+  --line:#E9DEC9;
+  --white:#fff;
+  --shadow:0 18px 50px rgba(25,52,79,.08);
+  --radius:24px;
+  --radius-sm:16px;
+  --container:min(1180px, calc(100% - 40px));
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:"Nunito",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+.container{width:var(--container);margin-inline:auto}
+.section{padding:92px 0}
+.soft-section{background:linear-gradient(180deg,#fffdf8,#fffaf0)}
+.section-grid-bg{background-image:linear-gradient(rgba(23,59,99,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(23,59,99,.035) 1px,transparent 1px);background-size:34px 34px}
+
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,59,99,.08)}
+.nav-wrap{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:inline-flex;align-items:center;gap:11px;font-family:"Be Vietnam Pro",sans-serif;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.brand-mark{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--navy)}
+.brand-mark svg{width:36px;height:36px}
+.nav-links{display:flex;align-items:center;gap:32px;font-weight:700;color:#3f5064}
+.nav-links>a:not(.btn){position:relative}
+.nav-links>a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--orange);transition:.25s}
+.nav-links>a:not(.btn):hover::after{width:100%}
+.nav-toggle{display:none;border:0;background:transparent;padding:8px}
+.nav-toggle span{display:block;width:25px;height:2px;background:var(--navy);margin:5px 0;border-radius:4px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:13px;font-family:"Be Vietnam Pro",sans-serif;font-weight:700;border:1px solid transparent;transition:transform .18s ease, box-shadow .18s ease, background .18s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,#F1AC33,#E5971E);color:#17324C;box-shadow:0 10px 24px rgba(225,146,25,.22)}
+.btn-primary:hover{box-shadow:0 13px 32px rgba(225,146,25,.3)}
+.btn-secondary{background:rgba(255,255,255,.78);border-color:#BEC9D3;color:var(--navy)}
+.btn-small{min-height:44px;padding:0 20px}
+
+.hero{position:relative;min-height:610px;overflow:hidden;background-color:#fffaf1}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:90px;background:linear-gradient(180deg,transparent,rgba(255,249,237,.96));pointer-events:none}
+.hero-art{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(255,251,241,.98) 0%,rgba(255,251,241,.9) 28%,rgba(255,251,241,.25) 55%,rgba(255,251,241,0) 72%),url("assets/hero-truck.png");background-size:cover;background-position:center right}
+.hero-layout{position:relative;z-index:2;min-height:610px;display:flex;align-items:center}
+.hero-copy{max-width:610px;padding:55px 0 85px}
+.eyebrow{margin:0 0 20px;color:var(--orange-dark);font-family:"Be Vietnam Pro",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.11em;font-size:.8rem;display:flex;align-items:center;gap:10px}
+.eyebrow>span{display:inline-block;width:30px;height:2px;background:var(--orange)}
+.eyebrow.centered{justify-content:center}
+h1,h2,h3,h4{font-family:"Be Vietnam Pro",sans-serif;color:var(--navy-2);margin-top:0}
+h1{font-size:clamp(2.7rem,5vw,5rem);line-height:1.08;letter-spacing:-.045em;margin-bottom:22px}
+h2{font-size:clamp(2rem,3.1vw,3.2rem);line-height:1.16;letter-spacing:-.035em;margin-bottom:14px}
+h3{font-size:1.25rem;line-height:1.3;margin-bottom:10px}
+.hero-lead{font-size:1.15rem;max-width:560px;color:#536274;margin-bottom:18px}
+.hero-points{display:flex;gap:18px;flex-wrap:wrap;color:var(--navy);font-weight:700;font-size:.96rem;margin:18px 0 28px}
+.hero-points span{background:rgba(255,255,255,.72);border:1px solid rgba(23,59,99,.1);padding:7px 11px;border-radius:999px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.trust-wrap{position:relative;z-index:8;margin-top:-52px}
+.trust-card{background:rgba(255,253,248,.96);backdrop-filter:blur(10px);border:1px solid #EED9AD;border-radius:22px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1.2fr .7fr .7fr .7fr;overflow:hidden}
+.trust-item{min-height:108px;padding:19px 22px;display:flex;align-items:center;justify-content:center;border-right:1px solid #F0E2C8}
+.trust-item:last-child{border-right:0}
+.trust-copy{justify-content:flex-start;gap:14px}
+.trust-copy strong{display:block;font-family:"Be Vietnam Pro";font-size:.95rem;color:var(--navy)}
+.trust-copy small,.metric small{display:block;color:#6d7784;font-size:.78rem;line-height:1.35;margin-top:4px}
+.sketch-icon{width:47px;height:47px;border:2px solid #5D8FC0;border-radius:14px;display:grid;place-items:center;color:#2F6DA4;background:#EDF7FF;font-weight:900;font-size:1.35rem;transform:rotate(-2deg)}
+.clock{border-radius:50%}
+.metric{flex-direction:column;text-align:center}
+.metric strong{font-family:"Be Vietnam Pro";font-size:1.8rem;color:var(--navy);line-height:1}
+
+.section-heading{text-align:center;max-width:760px;margin:0 auto 44px}
+.section-heading>p:not(.eyebrow){color:var(--muted);margin:0}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card{background:#fff;border:1px solid #E6E0D6;border-radius:22px;padding:18px 18px 22px;box-shadow:0 9px 28px rgba(31,51,75,.05);transition:.25s ease}
+.service-card:hover{transform:translateY(-7px);box-shadow:0 20px 42px rgba(31,51,75,.1);border-color:#EBD09B}
+.service-visual{height:190px;border-radius:16px;background:linear-gradient(160deg,#FFF9E8,#F7FBFF);overflow:hidden;display:grid;place-items:center;margin-bottom:20px}
+.service-visual img{width:100%;height:100%;object-fit:cover;object-position:center}
+.map-visual svg{width:85%;height:85%}
+.service-card p{color:var(--muted);min-height:75px}
+.text-link{font-weight:800;color:#1764AA}
+
+.fleet-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:54px;align-items:center}
+.fleet-copy>p:not(.eyebrow){color:var(--muted);font-size:1.07rem}
+.fleet-tags{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+.fleet-tags span{border:1px solid #D9CBAE;background:#fff;padding:8px 13px;border-radius:999px;color:var(--navy);font-weight:800}
+.check-list{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:10px;color:#526172}
+.check-list li::before{content:"✓";color:#4C9860;font-weight:900;margin-right:10px}
+.fleet-art-card{position:relative;border-radius:26px;overflow:hidden;border:1px solid #E6D7BC;background:#fff;box-shadow:var(--shadow);min-height:420px}
+.fleet-art-card>img{width:100%;height:100%;min-height:420px;object-fit:cover;object-position:center}
+.floating-note{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid #E6D9C1;box-shadow:0 10px 20px rgba(28,47,68,.12);border-radius:14px;padding:10px 14px;display:grid}
+.floating-note strong{font-family:"Be Vietnam Pro";color:var(--navy);font-size:.92rem}
+.floating-note span{font-size:.75rem;color:#708090}
+.note-one{top:22px;right:22px}.note-two{bottom:22px;left:22px}
+
+.team-card{border:1px solid #E6D9C1;border-radius:28px;background:linear-gradient(100deg,#FFF9EE 0%,#FFFCF8 50%,#FFF8E7 100%);display:grid;grid-template-columns:.9fr 1.2fr .8fr;align-items:end;min-height:365px;overflow:hidden;padding:40px 34px 0;position:relative}
+.team-card::before,.team-card::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;filter:blur(4px);opacity:.2}
+.team-card::before{background:#9FCB92;left:-80px;bottom:-120px}.team-card::after{background:#F6CF74;right:-80px;top:-90px}
+.team-copy{align-self:center;padding-bottom:38px;position:relative;z-index:2}
+.team-copy>p:not(.eyebrow){color:var(--muted);margin-bottom:24px}
+.team-illustration img{width:100%;max-height:270px;object-fit:contain;object-position:center bottom;mix-blend-mode:multiply}
+.team-side-art img{width:100%;max-height:235px;object-fit:contain;object-position:right bottom;mix-blend-mode:multiply}
+
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative}
+.process-grid::before{content:"";position:absolute;left:8%;right:8%;top:49px;border-top:2px dashed #E1B965;z-index:0}
+.process-step{position:relative;z-index:1;background:#fff;border:1px solid #E6DED1;border-radius:18px;padding:22px 17px;text-align:center;box-shadow:0 8px 24px rgba(37,54,71,.04)}
+.step-no{position:absolute;right:12px;top:10px;color:#D9C5A0;font-family:"Be Vietnam Pro";font-weight:800;font-size:.74rem}
+.step-icon{width:56px;height:56px;margin:0 auto 14px;border-radius:18px;display:grid;place-items:center;background:#FFF1C8;border:2px solid #F0C66E;color:var(--navy);font-size:1.45rem;font-weight:900}
+.process-step h3{font-size:1rem;margin-bottom:8px}.process-step p{font-size:.86rem;color:var(--muted);margin:0}
+
+.contact-section{padding-top:78px}
+.contact-card{background:linear-gradient(120deg,#FFF3D7,#FFF9EE 55%,#F1F8FD);border:1px solid #E9D7B4;border-radius:28px;padding:44px;display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;box-shadow:var(--shadow)}
+.contact-copy>p:not(.eyebrow){color:var(--muted)}
+.contact-benefits{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+.contact-benefits span{background:#fff;border:1px solid #E5DAC6;border-radius:999px;padding:7px 11px;font-size:.9rem;font-weight:700;color:var(--navy)}
+.contact-placeholder{background:rgba(255,255,255,.65);border:1px dashed #D8C49B;border-radius:14px;padding:14px 16px;display:grid;color:#667485;font-size:.87rem}
+.contact-placeholder strong{color:var(--navy);margin-bottom:3px}
+.quote-form{background:#fff;border:1px solid #E8E0D3;border-radius:20px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.quote-form label{display:grid;gap:7px;font-weight:800;color:var(--navy);font-size:.9rem}
+.quote-form input,.quote-form textarea{width:100%;border:1px solid #DDE2E7;border-radius:12px;padding:12px 13px;background:#FBFCFD;outline:none;transition:.2s}
+.quote-form input:focus,.quote-form textarea:focus{border-color:#7AA6D2;box-shadow:0 0 0 3px rgba(74,139,200,.12)}
+.quote-form .full{grid-column:1/-1}
+.form-note{margin:0;color:#7b8794;font-size:.8rem;text-align:center}
+
+.site-footer{background:#173B63;color:#D8E5EF;padding:56px 0 18px}
+.footer-grid{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:42px}
+.footer-brand{color:#fff;margin-bottom:12px}.footer-brand .brand-mark{font-size:1.4rem}
+.footer-grid p{max-width:300px;color:#B7CAD8}.footer-grid h4{color:#fff;font-size:1rem;margin-bottom:12px}.footer-grid>div:not(:first-child){display:flex;flex-direction:column;gap:8px}.footer-grid a,.footer-grid span{color:#C4D4E1;font-size:.9rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;font-size:.82rem;color:#9EB5C7}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.is-visible{opacity:1;transform:none}
+
+@media (max-width:980px){
+  :root{--container:min(100% - 30px, 920px)}
+  .nav-toggle{display:block}.nav-links{position:absolute;left:15px;right:15px;top:86px;background:#fff;border:1px solid #E7E1D8;border-radius:18px;box-shadow:var(--shadow);padding:16px;display:none;flex-direction:column;align-items:stretch;gap:5px}.nav-links.open{display:flex}.nav-links a{padding:10px 12px}.nav-links .btn{margin-top:4px}
+  .hero{min-height:660px}.hero-art{background-image:linear-gradient(90deg,rgba(255,251,241,.98) 0%,rgba(255,251,241,.82) 52%,rgba(255,251,241,.2) 100%),url("assets/hero-truck.png");background-position:58% center}.hero-copy{max-width:560px}
+  .trust-card{grid-template-columns:repeat(3,1fr)}.trust-copy{grid-column:span 3;border-right:0;border-bottom:1px solid #F0E2C8}.trust-copy+.trust-copy{grid-column:span 3}.metric{border-top:0}
+  .service-grid{grid-template-columns:1fr 1fr}.service-card:last-child{grid-column:1/-1;max-width:520px;justify-self:center;width:100%}
+  .fleet-layout{grid-template-columns:1fr}.fleet-art-card{order:-1}
+  .team-card{grid-template-columns:1fr 1.4fr}.team-side-art{display:none}
+  .process-grid{grid-template-columns:repeat(2,1fr)}.process-grid::before{display:none}.process-step:last-child{grid-column:1/-1}
+  .contact-card{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media (max-width:640px){
+  :root{--container:calc(100% - 24px)}
+  .section{padding:68px 0}.nav-wrap{height:70px}.brand{font-size:.95rem}.brand-mark{width:32px;height:32px}.brand-mark svg{width:32px}
+  .hero{min-height:720px}.hero-layout{min-height:720px;align-items:flex-start}.hero-art{background-image:linear-gradient(180deg,rgba(255,251,241,.98) 0%,rgba(255,251,241,.93) 47%,rgba(255,251,241,.25) 68%,rgba(255,251,241,.08) 100%),url("assets/hero-truck.png");background-size:auto 100%,auto 58%;background-repeat:no-repeat;background-position:center,75% bottom}.hero-copy{padding-top:58px}.hero-lead{font-size:1rem}.hero-actions .btn{flex:1;min-width:145px}
+  .trust-wrap{margin-top:-35px}.trust-card{grid-template-columns:1fr}.trust-copy,.trust-copy+.trust-copy{grid-column:auto}.trust-item{border-right:0;border-bottom:1px solid #F0E2C8}.trust-item:last-child{border-bottom:0}
+  .service-grid{grid-template-columns:1fr}.service-card:last-child{grid-column:auto}.service-visual{height:165px}
+  .fleet-art-card{min-height:300px}.fleet-art-card>img{min-height:300px}.floating-note{display:none}
+  .team-card{grid-template-columns:1fr;padding:30px 22px 0}.team-copy{padding-bottom:15px}.team-illustration img{max-height:230px}.team-side-art{display:none}
+  .process-grid{grid-template-columns:1fr}.process-step:last-child{grid-column:auto}
+  .contact-card{padding:28px 18px}.quote-form{grid-template-columns:1fr}.quote-form .full{grid-column:auto}
+  .footer-grid{grid-template-columns:1fr;gap:26px}.footer-bottom{flex-direction:column}
+}
