@@ -1,0 +1,13 @@
+TRƯỜNG AN LOGISTICS — BỘ FILE UPLOAD SẴN
+
+1. Giải nén ZIP.
+2. Vào trang chính repo GitHub: ngocan61206/tr-ng-an
+3. Add file -> Upload files.
+4. Chọn TẤT CẢ file trong thư mục này và upload vào ROOT của repo.
+5. Commit changes trực tiếp vào main.
+6. Đợi GitHub Pages deploy rồi Ctrl+F5 trang web.
+
+Bộ này không dùng thư mục assets để tránh lỗi đường dẫn.
+Các file ảnh đều nằm cùng cấp với index.html.
+
+Lưu ý: form liên hệ hiện chỉ là giao diện demo; số điện thoại/email/địa chỉ trong footer vẫn để "cập nhật".
